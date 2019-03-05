@@ -41,17 +41,4 @@ print("Average Change:",total_change/(total_months -1))
 print("Greatest Increase in Profits:" ,maxinc_month, max_increase)
 print("Greastest Decrease in Profits:",maxdec_month,max_decrease)
 
-      #months.append(row[0])
-      #profits.append(row[1])
-      
-      #for j in range(len(months)):
-      #	if profits[j] >= max_increase:
-      #	   max_increase = profits[j]
-      #	   inc_month = months [j]
-      #	elif profit[j]<=max_decrease:
-      #	     max_decrease = revenue[j]
-      #	     dec_month = months[j]
-
-   #total_month=len(months)
-   #total_profits = sum(int(i) for i in profits)        
-   #print (total_month,total_profits,average,max_increase,max_decrease,inc_month,dec_month)
+    
