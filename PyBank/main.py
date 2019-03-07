@@ -32,13 +32,18 @@ with open (bugetdata_csv,"r",newline="") as csvfile:
          
 
       prerow = row
-      
-print("Finacial Analysis")
-print("---------------------------------------------------------")
-print("Total_months:",total_months)
-print("Total profits:", total_profits)
-print("Average Change:",total_change/(total_months -1))
-print("Greatest Increase in Profits:" ,maxinc_month, max_increase)
-print("Greastest Decrease in Profits:",maxdec_month,max_decrease)
+
+outputdata_txt = os.path.join("output_data.txt") 
+with open (outputdata_txt,"w") as txtfile:
+   txtfile.writelines("Finacial Analysis\n")
+   txtfile.writelines("----------------------------------------------\n")
+   txtfile.writelines("Total_months:"+str(total_months) + "\n")
+   txtfile.writelines("Total profits:"+str(total_profits)+"\n")
+   txtfile.writelines("Average Change:"+str(total_change/(total_months -1))+"\n")
+   txtfile.writelines("Greatest Increase in Profits:" + maxinc_month + str(max_increase)+"\n")
+   txtfile.writelines("Greastest Decrease in Profits:"+ maxdec_month + str(max_decrease)+"\n")
+
+with open (outputdata_txt,"r") as outputfile:
+   print(outputfile.read())
 
     
