@@ -39,9 +39,9 @@ with open (outputdata_txt,"w") as txtfile:
    txtfile.writelines("----------------------------------------------\n")
    txtfile.writelines("Total_months:"+str(total_months) + "\n")
    txtfile.writelines("Total profits:"+str(total_profits)+"\n")
-   txtfile.writelines("Average Change:"+str(total_change/(total_months -1))+"\n")
-   txtfile.writelines("Greatest Increase in Profits:" + maxinc_month + str(max_increase)+"\n")
-   txtfile.writelines("Greastest Decrease in Profits:"+ maxdec_month + str(max_decrease)+"\n")
+   txtfile.writelines("Average Change:"+ str(round(total_change/(total_months -1),2))+"\n")
+   txtfile.writelines("Greatest Increase in Profits:" + maxinc_month + ": "+ str(max_increase)+"\n")
+   txtfile.writelines("Greastest Decrease in Profits:"+ maxdec_month + ": "+ str(max_decrease)+"\n")
 
 with open (outputdata_txt,"r") as outputfile:
    print(outputfile.read())
